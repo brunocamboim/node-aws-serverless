@@ -1,0 +1,23 @@
+service: my-test
+
+provider:
+  name: aws
+  runtime: nodejs10.x
+
+  stage: dev
+
+plugins:
+  - serverless-offline
+  
+custom:
+serverless-offline:
+  port: 3000
+
+functions:
+  debug:
+    handler: handler.debug
+    
+    events:
+     - http:
+         path: debug
+         method: get
