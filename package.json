@@ -1,9 +1,9 @@
 {
-  "name": "initial-structure",
+  "name": "initial-structure-node-aws",
   "version": "1.0.0",
-  "author": "Bruno",
+  "author": "Bruno Camboim",
   "license": "ISC",
-  "description": "Estrutura para um projeto Node com AWS Serverless",
+  "description": "Initial structure to use Node with AWS Serverless",
   "scripts": {
     "lint": "eslint src/**",
     "local": "dotenv sls offline",
