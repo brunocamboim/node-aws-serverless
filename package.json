@@ -1,15 +1,29 @@
 {
-  "name": "my-test",
+  "name": "initial-structure",
   "version": "1.0.0",
-  "description": "Testando serverless com node",
-  "main": "handler.js",
-  "scripts": {
-    "test": "not test",
-    "local": "serverless offline start"
-  },
   "author": "Bruno",
   "license": "ISC",
+  "description": "Estrutura para um projeto Node com AWS Serverless",
+  "scripts": {
+    "lint": "eslint src/**",
+    "local": "dotenv sls offline",
+    "test": "nyc --reporter=html mocha -t 10000",
+    "deploy": "sls deploy"
+  },
+  "dependencies": {},
   "devDependencies": {
-    "serverless-offline": "^5.12.0"
+    "aws-sdk": "^2.650.0",
+    "chai": "^4.2.0",
+    "dotenv": "^8.2.0",
+    "eslint": "^6.8.0",
+    "faker": "^4.1.0",
+    "mocha": "^7.1.1",
+    "mocha-junit-reporter": "^1.23.3",
+    "nyc": "^15.0.0",
+    "serverless": "^1.67.0",
+    "serverless-api-gateway-xray": "^1.0.1",
+    "serverless-offline": "^5.12.0",
+    "serverless-plugin-tracing": "^2.0.0",
+    "serverless-prune-plugin": "^1.4.2"
   }
 }
